@@ -19,7 +19,7 @@ const userSchema = new Schema(
       lowercase: true,
       trim: true,
     },
-    fullname: {
+    fullName: {
       type: String,
       required: true,
       trim: true,
@@ -46,7 +46,7 @@ const userSchema = new Schema(
       type: String,
     },
   },
-  { timestamps }
+  { timestamps: true }
 );
 
 userSchema.pre("save", async function (next) {
